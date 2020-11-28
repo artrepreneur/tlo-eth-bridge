@@ -104,7 +104,7 @@ function sendETH(address payable recipient, uint256 amount) public onlyOwner ret
   return true;
 }
 
-function Selfdestructs() payable public onlyOwner {
+function Selfdestructs() public onlyOwner {
   selfdestruct(owner);
 }
 
