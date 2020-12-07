@@ -162,7 +162,7 @@ function convertTo(address _from, bytes memory _to, uint256 _value) public onlyO
   return true;
 }
 
-function convertFrom(bytes memory _from, address _to, uint256 _value) public returns (bool) {
+function convertFrom(bytes memory _from, address _to, uint256 _value) public onlyOwner returns (bool) {
   require(_from.length == 71);
   _transfer(owner, _to, _value);
   emit ConversionFrom(_from, _to, _value);
